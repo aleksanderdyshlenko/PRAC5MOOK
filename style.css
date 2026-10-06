@@ -1,0 +1,80 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+}
+
+/* 1. Кнопка — transition */
+.btn {
+    background: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #004999;
+}
+
+
+/* 2. Блок — transform: scale */
+.box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+
+/* 3. Мигающий текст — @keyframes */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.text {
+    font-size: 24px;
+    animation: blink 1s infinite;
+}
+
+
+/* 4. Вращение элемента */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background: green;
+    border-radius: 50%;
+    margin: 40px auto;
+    animation: rotate 2s linear infinite;
+}
